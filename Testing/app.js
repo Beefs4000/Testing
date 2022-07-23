@@ -74,8 +74,7 @@ async function main() {
     
     // once we have got an employee, store it
     // check for the role
-    // create the employee obj based on the role
-
+    // create the employee object based on the role
     // add to the employee array
     if(answers.role === managerRole){
         employees.push(new Manager(answers.id, answers.email, answers.name, answers.office_number));
@@ -91,7 +90,7 @@ async function main() {
 
     console.log(employees);
 
-    // once the user says enough we will generate the HTML based on all employees collected
+    // once the user says 'no', we will generate the HTML based on all employees collected
     if(!answers.add_another){
         // generate html
         const html = generateHtml (employees);
